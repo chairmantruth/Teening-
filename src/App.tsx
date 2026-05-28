@@ -29,6 +29,7 @@ import {
   X
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { Analytics } from '@vercel/analytics/react';
 import { ForumPost, AssessmentResult, ChatMessage } from "./types";
 import { PRE_POPULATED_POSTS, PARENTING_RESOURCES } from "./data";
 
@@ -2546,6 +2547,7 @@ export default function App() {
           </button>
         </div>
       )}
+      <Analytics />
     </div>
   );
 }
