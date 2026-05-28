@@ -38,13 +38,14 @@ export interface ChatMessage {
   content: string;
   timestamp: string;
   isSpeaking?: boolean;
+  sources?: { title: string; url: string }[];
 }
 
 export interface ForumPost {
   id: string;
   title: string;
   author: string;
-  role: "Parent" | "Youth Pastor" | "SU Patron" | "Mentor" | "School Counselor";
+  role: "Parent" | "Youth Guide" | "Teen Coach" | "Mentor" | "School Counselor";
   region: string;
   content: string;
   verses: string[];

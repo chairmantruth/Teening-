@@ -3,78 +3,78 @@ import { ForumPost } from "./types";
 export const PRE_POPULATED_POSTS: ForumPost[] = [
   {
     id: "post-1",
-    title: "How to handle boarding school prep for a teen easily misled by friends?",
-    author: "Sister Faustina",
+    title: "How to navigate dopamine spikes and TikTok doomscrolling with high schoolers?",
+    author: "Elena Vance",
     role: "Parent",
-    region: "Kumasi, Ashanti Region",
-    content: "My 14-year-old son is moving to a boarding school in Cape Coast next term. At home, he participates in family altars, but he is easily swayed by peer groups. I am anxious that he might compromise his Christian values under boarding school pressure. Any practical tips from veteran guides on how to strengthen his foundation before he leaves?",
-    verses: ["Proverbs 13:20", "1 Corinthians 15:33"],
-    likes: 24,
+    region: "London, UK",
+    content: "My 15-year-old daughter is constantly swiping. At dinner, she is physically present but emotionally detached, almost experiencing twitching or anxiety when her phone is out of sight. I am trying to introduce soft boundaries without being seen as 'toxic' or 'controlling'. Any tips from parents who successfully co-created text-free zones?",
+    verses: ["#DigitalDetox", "#ScreenBalance", "#AestheticDisconnect"],
+    likes: 38,
     hasLiked: false,
     timestamp: "2 hours ago",
-    category: "Boarding School",
+    category: "Social Media",
     replies: [
       {
         id: "rep-1-1",
-        author: "Pastor Emmanuel",
-        role: "Youth Pastor",
-        content: "Peace be with you, Sis Faustina. First, don't worry. Before he leaves, walk through the school rules together and buy him a physical copy of 'Our Daily Bread' or a Scripture Union devotional. Encourage him to register with the school's Scripture Union (SU) on the very first Sunday! The SU acts as a replacement spiritual family. Let's lift him in prayers.",
+        author: "Marcus Brody",
+        role: "Teen Coach",
+        content: "What worked for my clients was replacing 'bans' with high-value alternatives. We set up an aesthetic record player and journaling desk in her room, making 'analog unwinding' look cool and aesthetic rather than a punishment. Also, establish a 'phones-on-the-charger-by-9pm' house rule that applies to adults first!",
         timestamp: "1 hour ago",
-        likes: 12
+        likes: 18
       },
       {
         id: "rep-1-2",
-        author: "Uncle Kwame",
+        author: "Coach Riley",
         role: "Mentor",
-        content: "Amen. I also advise doing a 'mock trial' at home. Re-enact scenarios where friends invite him to sneak out or peer pressure him to skip morning devotions. Help him practice saying 'No, Charley, I want to study and pray.' It builds real confidence!",
+        content: "Absolutely. Frame it as preserving 'clean energy' and focus intervals. High schoolers actually crave quiet focus but suffer from massive FOMO. If the whole family commits to putting phones on airplane mode during dinner, it feels like a collective mental wellness pact, not screen-shaming.",
         timestamp: "45 mins ago",
-        likes: 8
+        likes: 14
       }
     ]
   },
   {
     id: "post-2",
-    title: "Smartphone lockouts and morning Quiet Time discipline",
-    author: "Brother Andrews",
-    role: "SU Patron",
-    region: "Legon, Greater Accra",
-    content: "Many of our SHS day-students are staying awake until 2:00 AM scrolling social media (TikTok/Instagram) or chatting. By 5:00 AM during family prayers, they are fast asleep or physically present but spiritually vacant. I want to pitch a 'Digital Family Fast' to our PTA. Has anyone implemented this?",
-    verses: ["Proverbs 25:28", "Ephesians 5:15-16"],
-    likes: 42,
+    title: "Setting healthy limits on Discord & gaming without getting completely shut out",
+    author: "Jordan Peterson",
+    role: "Parent",
+    region: "New York, USA",
+    content: "My 14-year-old lives in his Discord servers and Minecraft custom realms. I understand it is his primary social circle, but he is staying awake until 3:00 AM. When I pull the Wi-Fi plug, it triggers major outbursts. How do we negotiate healthy curfews while honoring their digital friendships?",
+    verses: ["#ActiveGamingLimits", "#DigitalDiplomacy", "#FOMOShield"],
+    likes: 52,
     hasLiked: false,
     timestamp: "1 day ago",
     category: "Social Media",
     replies: [
       {
         id: "rep-2-1",
-        author: "Auntie Comfort",
+        author: "Ariel Sterling",
         role: "School Counselor",
-        content: "Yes, Andrews! We hold a 'Basket Devotion' in our home in Accra. By 9:30 PM, all family members (including my husband and I!) drop our phones in a wooden basket in the hallway. No phones in bedrooms. It is hard the first week, but it restores early morning devotions beautifully. Lead by example!",
+        content: "Pro-tip: Avoid pulling the plug on-the-fly. This registers as an unpredictable threat to their autonomy. Instead, use a 'digital contract' approach. Agree during a calm, non-gaming moment on automatic DNS schedules (Wi-Fi pauses for his MAC address at 11 PM). This takes the emotional burden off you; the tech enforces itself neutral and predictable.",
         timestamp: "18 hours ago",
-        likes: 19
+        likes: 29
       }
     ]
   },
   {
     id: "post-3",
-    title: "Discipling our boys to respect women and model 'Barima' values",
-    author: "Elder Kofi Tsatsu",
+    title: "Helping teens navigate physical self-image vs heavily-filtered digital clout",
+    author: "Sophia Chen",
     role: "Mentor",
-    region: "Ho, Volta Region",
-    content: "The worldly version of masculinity teaches boys to be proud, rough, and view girls as objects of conquest. We must reframe 'Barima' (manhood in Twi) around Christ-like stewardship: protector, hard worker, kind, polite, obedient, and respectful. We must raise modern Josephs who flee from lust.",
-    verses: ["Genesis 39:9", "2 Timothy 2:22"],
-    likes: 31,
+    region: "San Francisco, USA",
+    content: "We are seeing massive increases in teenage physical anxiety. Teens feel they are failing unless their lifestyle looks like a curated Pinterest board or a viral TikTok loop. We must find creative ways to validate raw, real, unfiltered offline activities and celebrate human quirks.",
+    verses: ["#AuthenticAesthetic", "#BodyVibeCheck", "#RealLifeClout"],
+    likes: 47,
     hasLiked: false,
     timestamp: "3 days ago",
     category: "Spiritual Growth",
     replies: [
       {
         id: "rep-3-1",
-        author: "Sister Efua",
-        role: "Parent",
-        content: "Medaase Elder Kofi for this reminder! If our brothers see their fathers respecting their mothers and helping in the kitchen, they learn respect naturally. Discipleship is lived out every single day in our Ghanaian homes.",
+        author: "Chloe James",
+        role: "Teen Coach",
+        content: "Yes! Encourage physical hands-on craft hobbies (clay modeling, skateboarding, cooking, hiking) where mistakes are part of the fun and cannot be easily filtered. Experiencing the friction of the physical world is the ultimate remedy for curation fatigue.",
         timestamp: "2 days ago",
-        likes: 15
+        likes: 22
       }
     ]
   }
@@ -83,58 +83,58 @@ export const PRE_POPULATED_POSTS: ForumPost[] = [
 export const PARENTING_RESOURCES = [
   {
     id: "res-1",
-    title: "Obaasima Guidelines: Raising Virtuous Teen Girls",
-    subtitle: "Dignity, Spiritual Devotion, and Self-Worth",
+    title: "The Aesthetic Detox Manual: Curating Clean Mental Spaces",
+    subtitle: "Dopamine resets, custom curfews, and visual quiet hours",
     duration: "10 mins read",
     category: "Character & Ethics",
-    bibleFocus: "Proverbs 31:30, Titus 2:3-5",
-    summary: "A blueprint to mentor teen girls to appreciate spiritual depth, healthy boundaries, academic diligence, and biblical womanhood in a modern commercialized culture.",
+    bibleFocus: "Mindfulness, Dopamine resets, Screen balance",
+    summary: "A practical guide to help teens replace endless algorithmic feeds with premium analog aesthetics, creative workstations, and healthy digital separation.",
     points: [
-      "Guard against digital beauty comparisons: Teach her that her self-worth is rooted in Christ, not online views.",
-      "Model active leadership: Involve her in church fellowships, teaching junior departments, or local charity.",
-      "The mother-mentor channel: Foster a relationship where she can talk about hormonal shifts and emotional interests without fear of physical beating or shouting."
+      "Co-design the bedroom context: Help them clean clutter and replace high-intensity RGB lights with warm, ambient lighting that cues sleep.",
+      "Analog dopamine substitutes: Provide instant cameras, vintage magazines, or physical sketchbooks to satisfy visual creativity offline.",
+      "The collective curfew: Create a cool central docking station in the kitchen where everyone docks their screens by 10:00 PM."
     ]
   },
   {
     id: "res-2",
-    title: "The Boarding School Spiritual Survival Handbook",
-    subtitle: "How to stay pure from Accra up to Cape Coast boarding lives",
-    duration: "15 mins read",
+    title: "The Peer Flow & FOMO Survival Handbook",
+    subtitle: "Navigating digital exclusions, Snapchat streaks, and group chats",
+    duration: "12 mins read",
     category: "Leadership & Faith",
-    bibleFocus: "Joshua 1:9, Daniel 1:8",
-    summary: "Guiding teenagers past boarding school hierarchies, bullying, exam anxiety, and the peer pressure to join cliques.",
+    bibleFocus: "Emotional Resilience, Group inclusion hacks",
+    summary: "Guiding teenagers past social exclusion, toxic online hierarchies, viral gossip spikes, and the crushing anxiety of Snapchat ranking levels.",
     points: [
-      "The Daniel Resolve: Encourage your teen to decide in their heart NOT to participate in light rituals, bad slang, or cheating.",
-      "Adopt a Mentor Student: Connect them with key Christian senior prefects or SU leaders who can look out for them.",
-      "The Letter connection: Send warm, encouraging physical letters quoting favorite family scriptures, reminding them of how much they are loved."
+      "The 'No-Streak' validation: Discuss how snap streaks are marketing gamification tricks designed to capture attention, not measure friendship.",
+      "Identify community anchors: Encourage physical local club participation, sports, or creative camps where digital status carries zero weight.",
+      "The Open-Door policy: Validate the pain of social exclusion without preaching, allowing them to express disappointment securely."
     ]
   },
   {
     id: "res-3",
-    title: "Biblical Discipline: Moving from Whip to Wisdom",
-    subtitle: "Understanding the difference between raw anger and godly correction",
-    duration: "12 mins read",
+    title: "Active Listening: Replacing Lectures with Vibe Checks",
+    subtitle: "Fostering psychological safety and open dialogue without micromanagement",
+    duration: "15 mins read",
     category: "Discipline & Guidance",
-    bibleFocus: "Hebrews 12:11, Proverbs 29:17",
-    summary: "A revolutionary manual about discipling Ghanaian kids. Shifts behavior from superficial fear of physical lashes to deep heart-level conviction and repentance.",
+    bibleFocus: "Empathy, Reflective feedback, Non-judgment",
+    summary: "A blueprint for modern parents. Pivot the conversation from top-down grilling to collaborative inquiry, allowing teens to express authentic feelings safely.",
     points: [
-      "Wait until cooled: Never correct a teenager when you are screaming in rage. Calm down first.",
-      "The Dialogue approach: Let the teenager verbalize exactly why their action was harmful or disrespectful.",
-      "Follow up with restorative prayer: Conclude correction times with a collaborative prayer of forgiveness and emotional reassurance."
+      "The 3-Second Pause: Never interrupt. When a teenager confesses an error, breathe for three seconds before replying to avoid triggering a defense reflex.",
+      "Reflective phrasing: Say 'It sounds like you felt really overwhelmed when that happened. Is that right?' rather than pointing out rules instantly.",
+      "Collaborative recovery: Draft solutions together. Give them agency in setting the consequences for their own boundary-crossings."
     ]
   },
   {
     id: "res-4",
-    title: "Vibrant Digital Fellowships: WhatsApp & Telegram Circles",
-    subtitle: "Practical guidebook to run high-engagement online teen groups",
+    title: "Creative Collaborative Digital Contracts",
+    subtitle: "How to negotiate gaming screens and tech budgets cleanly",
     duration: "8 mins read",
     category: "Digital Mentorship",
-    bibleFocus: "Hebrews 10:24-25, Colossians 4:6",
-    summary: "A blueprint to assist mentors and student leaders in launching, securing, and sustaining active daily engagement in mobile chat threads without dry spells.",
+    bibleFocus: "Mutual agreement, Tech safety, Autonomy",
+    summary: "A step-by-step framework to finalize a household tech contract that protects sleep and homework blocks while honoring teen interests.",
     points: [
-      "Dynamic Weekly Rhythms: Implement a steady calendar from Monday Devotionals to Sunday Evening Altars to avoid dead silence.",
-      "Bulletproof Boundary System: Restrict late-night posting, verify and secure all member profiles, and set clear codes of conduct.",
-      "Empower Teen Co-Admins: Delegate active group ownership (polls, graphics, prayer chains) to teen leaders to build godly characters."
+      "Establish non-negotiable slots: Protect hours 10:00 PM to 7:00 AM as absolute screen-free zones for brain restoration.",
+      "Gamified reward triggers: Tie high-speed gaming specs or custom gear acquisitions to consistent offline discipline and health goals.",
+      "Transparent monitoring: Install shared curfews instead of secret spyware, showing respect for their growing privacy."
     ]
   }
 ];

@@ -26,7 +26,8 @@ import {
   MicOff,
   Cross,
   Menu,
-  X
+  X,
+  ExternalLink
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { ForumPost, AssessmentResult, ChatMessage } from "./types";
@@ -73,19 +74,19 @@ export default function App() {
   const getLocalCounselorInfo = (cCountry: string) => {
     switch (cCountry) {
       case "Nigeria":
-        return { male: "Brother Chidi", female: "Pastor Amaka", val: "Nigerian", greeting: "Alafia / Peace be unto you! God bless your discipleship labor." };
+        return { male: "Dr. Chidi Obi", female: "Dr. Amaka Okafor", val: "Nigerian", greeting: "Hello! Always glad to support Nigerian families in navigating the teenage transition." };
       case "Kenya":
-        return { male: "Elder Jomo", female: "Mwalimu Faith", val: "Kenyan", greeting: "Habari, Bwana asifiwe! Warm greetings from East Africa in Christ." };
+        return { male: "Dr. Jomo Kamau", female: "Dr. Faith Mutua", val: "Kenyan", greeting: "Jambo! Welcome. Let's partner to help your teen flourish in modern East Africa." };
       case "South Africa":
-        return { male: "Pastor Sipho", female: "Sister Thandeka", val: "South African", greeting: "Sanibonani / Dumelang! Greetings in the precious name of Jesus Christ." };
+        return { male: "Dr. Sipho Khumalo", female: "Dr. Thandeka Zulu", val: "South African", greeting: "Sanibonani! Hello. Let's delve into proactive guidance for your teenager." };
       case "UK":
-        return { male: "Mentor Stephen", female: "Deaconess Elizabeth", val: "British", greeting: "Hello in Christ. It's a privilege to fellowship with you in training this teenager." };
+        return { male: "Dr. Stephen Reynolds", female: "Dr. Elizabeth Higgins", val: "British", greeting: "Hello. It is an honor to work with you on fostering healthy limits and modern teen wellness." };
       case "USA":
-        return { male: "Pastor David", female: "Sister Sarah", val: "American", greeting: "Hello! God bless you abundantly. Let's partner together to disciple this young standard-bearer." };
+        return { male: "Dr. David Carter", female: "Dr. Sarah Jenkins", val: "American", greeting: "Hi there! Let's align on some evidence-based strategies to empower your teenager." };
       case "Global":
-        return { male: "Mentor Dave", female: "Elder Rebecca", val: "Global", greeting: "Greetings in Christ Jesus! Let's align our mentorship across boundaries for this next generation." };
+        return { male: "Dr. Dave Sterling", female: "Dr. Rebecca Miller", val: "Global", greeting: "Greetings! Let's examine dynamic tools to guide your teen's development across boundaries." };
       default:
-        return { male: "Uncle Kwame", female: "Auntie Efua", val: "Ghanaian", greeting: "Medaase, greeting in our Lord Jesus. God bless your labor of love with this child." };
+        return { male: "Dr. Kwame Boakye", female: "Dr. Efua Mensah", val: "Ghanaian", greeting: "Hello! Medaase. Let's join forces in mentoring and setting healthy milestones with this child." };
     }
   };
 
@@ -118,82 +119,82 @@ export default function App() {
   const WHEEL_CATEGORIES = [
     {
       id: "spiritual",
-      name: "Spiritual Growth",
-      icon: "✝",
+      name: "Self-Identity & Purpose",
+      icon: "✨",
       color: "#047857",
       bgColor: "#ecfdf5",
       borderColor: "#047857",
-      challenges: "Drifting from church fellowships, prioritizing screen scrolling over personal devotion, and peer doubts regarding core biblical values.",
-      milestones: "Establishing steady early-morning Quiet Time, leading sibling prayers, and taking active roles in youth fellowships (such as Scripture Union).",
-      bibleVerses: ["1 Timothy 4:12 - 'Be an example to the believers in conduct, faith, and purity.'", "Mark 1:35 - 'Early in the morning, while it was dark, Jesus prayed in a solitary place.'"],
+      challenges: "Struggling to find an authentic voice, getting caught in heavily-curated digital vanity comparison feeds.",
+      milestones: "Forming an introspective, independent identity; displaying confidence offline regardless of social media trends.",
+      bibleVerses: ["#AuthenticSelf - Value organic real-world connection", "#MindfulAttention - Reduce reactive validation seeking"],
       strategies: [
-        "The Scripture Journal Altar: Empower your teen with an attractive personal notebook to document devotions, prayer alignments, and daily insights.",
-        "Faith Peer Accords: Form healthy morning accountability groups with church/school peers to exchange encouraging scriptures.",
-        "Assign Meaningful Roles: Entrust the teenager to select hymns or coordinate song alignments for family prayer altars."
+        "Aesthetic Analog Outlets: Introduce instant cameras, record players, or visual sketchbooks to satisfy creative expression offline.",
+        "Dopamine-Free Mornings: Promote starting the day with a stretch, personal journaling, or quiet hydration instead of hitting screen feeds.",
+        "Reframing Influence: Encourage discussions on how algorithms curate feeds to capture attention rather than measure real-world worth."
       ]
     },
     {
       id: "emotional",
-      name: "Emotional Well-being",
+      name: "Emotional Balance",
       icon: "🧠",
       color: "#4f46e5",
       bgColor: "#f5f3ff",
       borderColor: "#4f46e5",
-      challenges: "Mood irritability, internal report panic/exam stress, identity comparison on popular feeds, and persistent low self-worth.",
-      milestones: "Responding respectfully without slam-doors or tantrums, articulating doubts calmly, and knowing they are fearfully and wonderfully made by God.",
-      bibleVerses: ["Philippians 4:6-7 - 'Do not be anxious about anything, but through prayer let your requests be known to God.'", "Proverbs 16:32 - 'He who is slow to anger is better than the mighty.'"],
+      challenges: "Mood irritability, midnight feed doomscrolling sleep fatigue, group chat peer status anxiety.",
+      milestones: "Handling triggers without explosive door-slams, articulating anxieties calmly, and maintaining healthy self-value.",
+      bibleVerses: ["#DopamineDetox - Clear mental screen clutter", "#PauseMethod - Breathe 3 seconds before reacting"],
       strategies: [
-        "The 10-Minute Brain Cool: Support them to step back during high-intensity conflict, and ask: 'What is the background hurt?'",
-        "Scriptural Daily Confessions: Recite Psalm 139:14 aloud each morning to replace worldly social media metrics with solid spiritual identity.",
-        "Secure Mentor Channels: Set aside bi-weekly casual talk slots where teens share frustrations without immediate parental lectures or correction."
+        "The 3-Second Breath Pause: When stress spikes, cue a conscious breath to allow the prefrontal cortex to de-escalate reactivity.",
+        "Reflective Mirroring: Say 'It sounds like you felt really overwhelmed by that team feedback. Is that right?' to build safety.",
+        "Secure Talk Intervals: Set aside casual bi-weekly talks over tea or walks where they can unpack stress without immediate lectures."
       ]
     },
     {
       id: "social",
-      name: "Social Skills",
+      name: "Peer Dynamics & Culture",
       icon: "👥",
       color: "#e11d48",
       bgColor: "#fff1f2",
       borderColor: "#e11d48",
-      challenges: "Conforming to worldly peer slang or boundaries to feel included; school grouping stress and physical bullying defense challenges.",
-      milestones: "Choosing pure, healthy companion circles, showing polite manners ('Obuo' in Ghana or natural respect), and practicing boundary assertion.",
-      bibleVerses: ["Proverbs 13:20 - 'He who walks with the wise grows wise, but a companion of fools suffers harm.'", "Romans 12:2 - 'Do not conform to the pattern of this world.'"],
+      challenges: "Social group chat exclusions, pressure to follow unhealthy online viral trends, or real-world social worries.",
+      milestones: "Cultivating organic, respectful offline relationships and asserting firm bounds when snap stats become toxic.",
+      bibleVerses: ["#TrueCircle - Quality offline friend bonds", "#TechDiplomacy - Co-create family dynamic rules"],
       strategies: [
-        "Boundary Assertion Roleplays: Re-enact peer-pressure scenarios at home, coaching them to say 'No, friend, I want to pursue holiness.'",
-        "Home Stewardship Modeling: Connect boys with cooking/housekeeping chores, showing respect for both genders naturally under God's roof.",
-        "Group Fellowship Tethers: Consistently connect them with church youth choirs, Christian sports pools, or volunteering networks."
+        "Low-Stress Boundary Roleplays: Playfully practice boundary scenarios to help them say 'No thanks, that's not really my speed.'",
+        "Collaborative Contract Rules: Co-design household screen schedules so boundaries are predictable and mutually owned.",
+        "Status-Free Hobbies: Join local skate clubs, chess, bands, or sports teams where digital rankings have zero relevance."
       ]
     },
     {
       id: "academic",
-      name: "Academic Performance",
+      name: "Focus & Daily Initiative",
       icon: "🎓",
       color: "#b45309",
       bgColor: "#fef3c7",
       borderColor: "#b45309",
-      challenges: "Late-night web scrolling displacing sleep and homework time, study procrastination, and grade failure worry.",
-      milestones: "Establishing a steady home desk schedule, taking proud initiative on complex subjects, and seeing study as an act of service to Christ.",
-      bibleVerses: ["Colossians 3:23 - 'Whatever you do, work at it with all your heart, as working for the Lord.'", "Proverbs 10:4 - 'Lazy hands make for poverty, but diligent hands bring wealth.'"],
+      challenges: "Midnight notifications splitting study focus spans, homework procrastination, and chronic exam panic.",
+      milestones: "Setting up a clean independent desk schedule, taking proud ownership of complex projects, and viewing failures as learning data.",
+      bibleVerses: ["#FocusFlow - Use quiet study intervals", "#EffortCheck - Celebrate work courage over perfect scores"],
       strategies: [
-        "The Unplugged Study Desk: Implement a focus block study strategy (e.g., 25-minute Pomodoro) with absolutely zero devices allowed in range.",
-        "Interactive Study Partnerships: Facilitate dynamic study partnerships with upright, high-standard classmates for tough exams.",
-        "Reframe Study as Worship: Direct them to see study as their current active stewardship, honoring God with mental brilliance."
+        "The Isolated Study Desk: Establish a study interval strategy (e.g., 25-minute quiet sessions) with zero screens in the vicinity.",
+        "Growth Mindset Reframing: Transform errors from visual failures to data points, discussing exactly how to adjust for the next round.",
+        "Visual Habits Dashboards: Use physical whiteboard calendars to let teens track their daily milestones in satisfying, colorful ways."
       ]
     },
     {
       id: "physical",
-      name: "Physical Health",
-      icon: "🏃",
+      name: "Circadian Health & Rhythm",
+      icon: "🌱",
       color: "#0891b2",
       bgColor: "#ecfeff",
       borderColor: "#0891b2",
-      challenges: "Severe sleep loss due to midnight phone usage under blankets, overeating synthetic sugars, and body-shame insecurity.",
-      milestones: "Securing 8 continuous hours of restorative sleep, respecting their physical body as the temple of the Holy Spirit, and getting regular exercise.",
-      bibleVerses: ["1 Corinthians 6:19-20 - 'Do you not know that your body is a temple of the Holy Spirit?'", "1 Timothy 4:8 - 'For physical training is of some value, but godliness has value for all things.'"],
+      challenges: "Vast sleep deficits from midnight scrolling under blankets, low movement, and muscle/posture fatigue.",
+      milestones: "Achieving 8 continuous hours of restorative sleep, physical active play, and healthy daily hydration.",
+      bibleVerses: ["#CircadianReset - Protect melatonin levels", "#OfflineGrounding - Balance biological stress"],
       strategies: [
-        "Smartphone Bedroom Bans: Drop all devices into a communal home basket at 9:30 PM to optimize rest and neuro-wellness.",
-        "Temple Mobilization: Encourage outdoor sports, walking, soccer, or robust chore participation.",
-        "The Daniel Alternative: Promote water, vegetables, and wholesome local grains over synthetic soft drinks and processed snacks."
+        "Communal Nightly Docking: Place a beautiful charging station in the common room where all phones sleep after 10:00 PM.",
+        "Active Cortisol Releases: Encourage continuous active outdoor workouts, surfing, hiking, or dance to discharge screen fatigue.",
+        "Stable Neuro-chemistry: Swap sugary drinks with refreshing hydration to avoid insulin crashes and secure focus."
       ]
     }
   ];
@@ -206,7 +207,7 @@ export default function App() {
       {
         id: "welcome",
         role: "model",
-        content: `${counselor.greeting} I am **${counselor.male}**, your co-laborer and elder discipleship helper. Training young teenagers under a **${counselor.val} context** to become spiritual, proactive, disciplined, and awesome Christian teens is a highly noble calling. Whether you are dealing with boarding school adjustive strains, modern media comparisons, or chore disobedience, let us apply scriptural keys. What experiences or situations is your teenager walking through today?`,
+        content: `${counselor.greeting} I am **${counselor.male}**, your dedicated mentor and adolescent wellness guide for **Teening**. Under the **${counselor.val} context**, we specialize in co-creating healthy boundaries, resolving sleep-debt challenges, and managing digital fatigue using modern supportive counseling keys. Tell me: what behavior, question, or screen habit are we navigating today?`,
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       }
     ];
@@ -224,7 +225,7 @@ export default function App() {
   const [newPostTitle, setNewPostTitle] = useState<string>("");
   const [newPostContent, setNewPostContent] = useState<string>("");
   const [newPostCategory, setNewPostCategory] = useState<"Boarding School" | "Social Media" | "Discipline" | "Spiritual Growth">("Discipline");
-  const [newPostRole, setNewPostRole] = useState<"Parent" | "Youth Pastor" | "SU Patron" | "Mentor" | "School Counselor">("Parent");
+  const [newPostRole, setNewPostRole] = useState<"Parent" | "Youth Guide" | "Teen Coach" | "Mentor" | "School Counselor">("Parent");
   const [newPostRegion, setNewPostRegion] = useState<string>("Accra, Greater Accra");
   const [showNewPostForm, setShowNewPostForm] = useState<boolean>(false);
   const [expandedPostId, setExpandedPostId] = useState<string | null>(null);
@@ -232,11 +233,11 @@ export default function App() {
 
   // Daily Discipleship Checklists
   const [checklist, setChecklist] = useState([
-    { id: "chk1", task: "Led morning Scripture devotion (Quiet Time)", completed: true, points: 15 },
-    { id: "chk2", task: "Addressed teen disobedience with calm, wise dialogue", completed: false, points: 20 },
-    { id: "chk3", task: "Prayed specifically for their personal board-life/school peers", completed: true, points: 10 },
-    { id: "chk4", task: "Validated their identity in Christ ('Obaasima' / 'Barima')", completed: false, points: 15 },
-    { id: "chk5", task: "Instituted high-quality digital boundaries at diner table", completed: false, points: 20 },
+    { id: "chk1", task: "Initiated morning routine vibe-check (analog focus)", completed: true, points: 15 },
+    { id: "chk2", task: "Addressed teen friction with calm active listening", completed: false, points: 20 },
+    { id: "chk3", task: "Offered supportive checks on peer group situations", completed: true, points: 10 },
+    { id: "chk4", task: "Validated their healthy identity offline", completed: false, points: 15 },
+    { id: "chk5", task: "Instituted high-quality digital screen-free curfews", completed: false, points: 20 },
   ]);
 
   const [activeGraceMultiplier, setActiveGraceMultiplier] = useState(1);
@@ -245,12 +246,12 @@ export default function App() {
   const CHALLENGE_OPTIONS = [
     "Social Media comparisons",
     "Boarding school adjustments",
-    "Skipping Morning quiet devotions",
-    "Underperforming in SHS/JHS tests",
+    "Skipping analog quiet focus intervals",
+    "Underperforming in school tests",
     "Stubbornness / Refusing house chores",
     "Secret peer group influences",
-    "Cyber distractions (TikTok / Instagram)",
-    "Doubt of Christian core values",
+    "Cyber distractions (TikTok / Snapchat)",
+    "Anxiety over future goals",
     "Fear of failure & Low self-worth"
   ];
 
@@ -334,8 +335,9 @@ export default function App() {
         const modelReply: ChatMessage = {
           id: "bot-" + Date.now(),
           role: "model",
-          content: data.result || "I apologize, my child, my connection encountered a glitch. Let us retry.",
-          timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+          content: data.result || "I apologize, it seems we encountered a brief connection glitch. Let's retry.",
+          timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+          sources: data.sources || []
         };
         setChatMessages(prev => [...prev, modelReply]);
       } else {
@@ -347,7 +349,7 @@ export default function App() {
       const errorMsg: ChatMessage = {
         id: "bot-err-" + Date.now(),
         role: "model",
-        content: "Medaase, we encountered an internet interruption. Remember *Psalm 46:1* - 'God is our refuge and strength.' Let's try again.",
+        content: "We encountered a temporary connection interruption. Let's try that again. We will load our offline guidance engine to give you supportive tips.",
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       };
       setChatMessages(prev => [...prev, errorMsg]);
@@ -572,29 +574,29 @@ export default function App() {
       {/* Onboarding location & role sign up process overlay */}
       {!hasCompletedSignup && (
         <div id="signup-overlay" className="fixed inset-0 bg-emerald-950/80 backdrop-blur-md flex items-center justify-center p-4 z-[9999] animate-fade-in">
-          <div id="signup-card" className="bg-white max-w-lg w-full rounded-3xl p-6 md:p-8 border border-amber-200 shadow-2xl flex flex-col gap-5 relative animate-scale-up">
+          <div id="signup-card" className="bg-white max-w-lg w-full rounded-3xl p-6 md:p-8 border border-neutral-100 shadow-2xl flex flex-col gap-5 relative animate-scale-up">
             <div className="text-center space-y-2">
-              <div className="w-14 h-14 bg-emerald-700 rounded-2xl flex items-center justify-center text-white font-bold text-2xl mx-auto shadow-md">
-                ⚓
+              <div className="w-14 h-14 bg-gradient-to-tr from-emerald-600 to-cyan-500 rounded-2xl flex items-center justify-center text-white font-bold text-2xl mx-auto shadow-md">
+                ✨
               </div>
               <h3 className="text-xl md:text-2xl font-black text-slate-900 leading-none">
-                Discipleship Commission Setup
+                Teening Onboarding Setup
               </h3>
-              <p className="text-xs text-amber-700 font-extrabold uppercase tracking-wider">
-                Select Your Regional Location & Mentoring Role
+              <p className="text-xs text-emerald-800 font-extrabold uppercase tracking-wider">
+                Select Your Regional Location & Coach Role
               </p>
               <p className="text-[11px] md:text-xs text-slate-500 leading-relaxed">
-                Welcome, co-laborer. Our interactive advisor tailors terminology, exam setups, daily checklists, and active counseling elder identities (like Uncle Kwame or Brother Chidi) to your chosen country.
+                Welcome! Our interactive advisor tailors evidence-based youth terminology, diagnostic checklists, and active mentor guide identities (like Dr. Kwame Boakye or Dr. Stephen Reynolds) to your selected country.
               </p>
             </div>
 
             <div className="space-y-3">
               {/* Name Input */}
               <div>
-                <label className="text-xs font-bold text-slate-500 block mb-1">Your Mentoring Title or Name:</label>
+                <label className="text-xs font-bold text-slate-500 block mb-1">Your Title or Preferred Name:</label>
                 <input
                   type="text"
-                  placeholder="e.g., Sister Faustina, Pastor Joseph, Mentor Cynthia"
+                  placeholder="e.g., Coach Elena, Dr. Julian, Parent Jordan"
                   value={signupName}
                   onChange={(e) => setSignupName(e.target.value)}
                   className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs font-semibold focus:ring-1 focus:outline-none focus:ring-emerald-700 focus:bg-white"
@@ -603,16 +605,16 @@ export default function App() {
 
               {/* Role select */}
               <div>
-                <label className="text-xs font-bold text-slate-500 block mb-1">Your Discipleship Role:</label>
+                <label className="text-xs font-bold text-slate-500 block mb-1">Your Guidance Role:</label>
                 <select
                   value={signupRole}
                   onChange={(e) => setSignupRole(e.target.value)}
                   className="w-full text-xs font-bold bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-slate-700 focus:outline-none focus:ring-1 focus:ring-emerald-700 font-sans"
                 >
                   <option value="Parent">👦 Dedicated Parent / Guardian</option>
-                  <option value="Youth Pastor flex">⛪ Youth Pastor / Sunday School Guide</option>
-                  <option value="SU Patron">📘 Scripture Union (SU) Boarding Advisor</option>
-                  <option value="Mentor">👥 Local Community Mentor / Group Organizer</option>
+                  <option value="Youth Guide">🧠 Youth Guide / Teen Counselor</option>
+                  <option value="Teen Coach">🎒 Teen Development Coach</option>
+                  <option value="Mentor">👥 Local Mentor / Mentor Specialist</option>
                 </select>
               </div>
 
@@ -626,13 +628,13 @@ export default function App() {
                   onChange={(e) => setSignupCountry(e.target.value)}
                   className="w-full text-xs font-bold bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-slate-700 focus:outline-none focus:ring-1 focus:ring-emerald-700 font-sans"
                 >
-                  <option value="Ghana">🇬🇭 Ghana (Boarding / JHS & SHS, custom Twi terminologies)</option>
-                  <option value="Nigeria">🇳🇬 Nigeria (West African school/JAMB, elder Brother Chidi)</option>
-                  <option value="Kenya">🇰🇪 Kenya (East African church settings, elder Mwalimu Jomo)</option>
-                  <option value="South Africa">🇿🇦 South Africa (Sipho & Thandeka local counselor guides)</option>
-                  <option value="UK">🇬🇧 United Kingdom (British school/GCSE, Mentor Stephen)</option>
-                  <option value="USA">🇺🇸 United States (American high school youth leagues, Pastor David)</option>
-                  <option value="Global">🌐 Global Worldwide (Multi-cultural worldwide scripture guidance)</option>
+                  <option value="Ghana">🇬🇭 Ghana (Custom local context/Ghana JHS & SHS support)</option>
+                  <option value="Nigeria">🇳🇬 Nigeria (West African scholastic and lifestyle advisor)</option>
+                  <option value="Kenya">🇰🇪 Kenya (East African youth setting advisor)</option>
+                  <option value="South Africa">🇿🇦 South Africa (Sipho & Thandeka youth coach guides)</option>
+                  <option value="UK">🇬🇧 United Kingdom (British secondary school & focus settings)</option>
+                  <option value="USA">🇺🇸 United States (High school wellness tracking & guidance)</option>
+                  <option value="Global">🌐 Global Worldwide (Multi-cultural scientific adolescent support)</option>
                 </select>
               </div>
             </div>
@@ -641,7 +643,7 @@ export default function App() {
               type="button"
               onClick={() => {
                 if (!signupName.trim()) {
-                  alert("Please fill your discipleship title or name to proceed.");
+                  alert("Please enter your name or title to proceed.");
                   return;
                 }
                 localStorage.setItem("selected_country", signupCountry);
@@ -657,14 +659,14 @@ export default function App() {
                   {
                     id: "welcome",
                     role: "model",
-                    content: `${counselor.greeting} I am **${counselor.male}** (or **${counselor.female}**), your co-laborer in Christ. Having initialized the **${counselor.val} context**, our interactive chat is completely aligned with your local school formats, fellowships, and societal settings. Tell me: what challenges or progress is your teenager experiencing today?`,
+                    content: `${counselor.greeting} I am **${counselor.male}**, your dedicated mentor and adolescent wellness guide for **Teening**. Having initialized the **${counselor.val} context**, our interactive chat is completely aligned with your local school formats, focus habits, and societal settings. Tell me: what challenges, behavior, or screen habits are we navigating today?`,
                     timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
                   }
                 ]);
               }}
               className="w-full py-3 bg-emerald-700 text-white rounded-xl font-bold text-xs uppercase tracking-wider shadow hover:bg-emerald-800 active:scale-95 transition-all text-center flex items-center justify-center gap-2 cursor-pointer mt-2"
             >
-              Confirm Discipleship Context & Enter
+              Confirm Context & Open Teening
             </button>
           </div>
         </div>
@@ -678,8 +680,8 @@ export default function App() {
       >
         {/* Sidebar Header branding */}
         <div className="p-6 flex items-center gap-3 border-b border-emerald-900/30">
-          <div className="w-10 h-10 bg-emerald-700 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md shrink-0">
-            ✝
+          <div className="w-10 h-10 bg-gradient-to-tr from-emerald-500 to-cyan-400 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md shrink-0">
+            ✨
           </div>
           {!isSidebarCollapsed && (
             <motion.div 
@@ -688,10 +690,10 @@ export default function App() {
               className="overflow-hidden whitespace-nowrap"
             >
               <h1 className="text-base font-black text-amber-300 tracking-tight leading-none">
-                Disciple Guide
+                Teening
               </h1>
               <p className="text-[9px] text-emerald-300 uppercase tracking-widest font-extrabold mt-0.5">
-                Teens Companion
+                Teen Balance Coach
               </p>
             </motion.div>
           )}
@@ -802,12 +804,12 @@ export default function App() {
               <div className="space-y-6">
                 <div className="flex items-center justify-between pb-4 border-b border-emerald-900/40">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-9 h-9 bg-emerald-700 rounded-lg flex items-center justify-center text-white font-bold text-lg">
-                      ✝
+                    <div className="w-9 h-9 bg-gradient-to-tr from-emerald-500 to-cyan-400 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                      ✨
                     </div>
                     <div>
-                      <h4 className="font-extrabold text-sm text-white leading-none">Disciple Guide</h4>
-                      <p className="text-[9px] text-emerald-300 uppercase tracking-widest font-black mt-1">Teens Companion</p>
+                      <h4 className="font-extrabold text-sm text-white leading-none">Teening</h4>
+                      <p className="text-[9px] text-emerald-300 uppercase tracking-widest font-black mt-1">Teen Balance Coach</p>
                     </div>
                   </div>
                   <button 
@@ -898,25 +900,25 @@ export default function App() {
 
             {/* Mobile branding only (hidden on desktop) */}
             <div className="flex items-center gap-2 lg:hidden">
-              <div className="w-8 h-8 bg-emerald-700 id-app-logo-mobile rounded-lg flex items-center justify-center text-white font-bold text-base">
-                ✝
+              <div className="w-8 h-8 bg-gradient-to-tr from-emerald-500 to-cyan-400 id-app-logo-mobile rounded-lg flex items-center justify-center text-white font-bold text-base">
+                ✨
               </div>
               <div>
-                <h1 className="text-xs font-black text-slate-900 leading-none">Disciple Guide</h1>
-                <p className="text-[9px] uppercase tracking-wider text-amber-700 font-extrabold leading-none mt-1">Teens Companion</p>
+                <h1 className="text-xs font-black text-slate-900 leading-none">Teening</h1>
+                <p className="text-[9px] uppercase tracking-wider text-emerald-800 font-extrabold leading-none mt-1">Teen Balance Coach</p>
               </div>
             </div>
 
             {/* Active section title shown on Desktop */}
             <div className="hidden lg:block">
-              <span className="text-[10px] text-amber-700 font-extrabold uppercase tracking-wider block">
-                Discipleship Administration
+              <span className="text-[10px] text-emerald-800 font-extrabold uppercase tracking-wider block">
+                Teening Guidance Center
               </span>
               <h2 className="text-lg font-black text-[#111827] leading-none capitalize mt-1">
-                {activeTab === "dashboard" && "Stressor Dashboard & Analyst"}
-                {activeTab === "chat" && "Counsel Chat & Voice Assist Rooms"}
-                {activeTab === "forum" && "Parenting Support Fellowship Group"}
-                {activeTab === "resources" && "Academy Playbooks & Expert Guidelines"}
+                {activeTab === "dashboard" && "Screen Time & Focus Analyst"}
+                {activeTab === "chat" && "AI Counsel Chat & Grounded Search Room"}
+                {activeTab === "forum" && "Parenting Support Roundtable"}
+                {activeTab === "resources" && "Coaching Handbooks & Expert Guides"}
               </h2>
             </div>
           </div>
@@ -925,10 +927,10 @@ export default function App() {
             {/* Grace progress widget */}
             <div className="flex items-center gap-2 text-right">
               <div className="hidden md:block">
-                <span className="text-[9px] text-slate-400 block font-bold uppercase tracking-wider">Discipleship Earns</span>
+                <span className="text-[9px] text-slate-400 block font-bold uppercase tracking-wider">Teening Effort</span>
               </div>
               <span className="text-xs font-black text-emerald-850 bg-emerald-50 px-3 py-1.5 rounded-2xl border border-emerald-100/50 whitespace-nowrap shadow-sm">
-                ⭐ {totalCheklistScore} Grace Points
+                ⭐ {totalCheklistScore} Vibe Points
               </span>
             </div>
 
@@ -1086,12 +1088,12 @@ export default function App() {
                   {isAnalyzing ? (
                     <>
                       <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent" />
-                      Interpreting Holy Scriptures...
+                      Running Diagnostic Protocol...
                     </>
                   ) : (
                     <>
                       <Brain className="w-4 h-4" />
-                      Generate Discipleship Guide
+                      Generate Balance Insights
                     </>
                   )}
                 </button>
@@ -1147,10 +1149,10 @@ export default function App() {
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-emerald-700 text-xs font-bold">✓</div>
                     </div>
                     <p className="text-sm font-semibold text-slate-700 animate-pulse">
-                      Analyzing teenage developmental milestones with biblical guidelines...
+                      Analyzing teenage developmental milestones with diagnostic counseling protocols...
                     </p>
                     <p className="text-xs text-slate-400 mt-1 max-w-sm">
-                      Combining Accra youth ministry contexts with pediatric counseling expertise.
+                      Combining global pedagogical frameworks with local pediatric counseling expertise.
                     </p>
                   </div>
                 ) : analysisResult ? (
@@ -1162,7 +1164,7 @@ export default function App() {
                         <div>
                           <p className="font-extrabold text-[11px] uppercase tracking-wider text-amber-800">Local Offline Guided Wisdom Active</p>
                           <p className="text-amber-800/80 mt-1 leading-normal font-medium">
-                            Due to current model high-traffic periods, your customized evaluation is loaded via built-in sound biblical counseling templates. Complete with high-quality diagnostic insights.
+                            Due to high-traffic periods, your customized evaluation is loaded via local adolescent therapy templates. Complete with high-quality clinical diagnostic insights.
                           </p>
                         </div>
                       </div>
@@ -1197,15 +1199,15 @@ export default function App() {
                               </p>
                               
                               <div className="bg-rose-50/70 border border-rose-100 rounded-xl p-2.5">
-                                <span className="text-[10px] font-extrabold text-rose-800 block mb-0.5">Spiritual Root:</span>
+                                <span className="text-[10px] font-extrabold text-rose-800 block mb-0.5">Biological or Social Origin:</span>
                                 <p className="text-[11px] text-rose-700 italic mb-1.5">
                                   {p.biblicalRoot}
                                 </p>
-                                <span className="text-[10px] font-bold text-emerald-800 block">Anchor Scriptures:</span>
+                                <span className="text-[10px] font-bold text-emerald-800 block">Action Hacks & Cognitive Anchors:</span>
                                 <div className="space-y-1 mt-1">
                                   {p.bibleVerses?.map((v, sIdx) => (
                                     <div key={sIdx} className="text-[11px] text-emerald-900 font-medium">
-                                      📖 {v}
+                                      ✨ {v}
                                     </div>
                                   ))}
                                 </div>
@@ -1313,14 +1315,14 @@ export default function App() {
             {/* Core Box 3: Daily Habits Grace Tracker (span-4) - Bento Row 2 */}
             <section id="bento-grace-tracker" className="lg:col-span-4 bg-[#FFFDF5] border border-amber-200 rounded-3xl p-6 shadow-sm">
               <div className="flex justify-between items-start mb-2">
-                <span className="text-[10px] font-extrabold uppercase tracking-widest text-amber-700 bg-amber-100 px-2 py-0.5 rounded">
-                  Discipleship Habits
+                <span className="text-[10px] font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded">
+                  Teening Habits
                 </span>
                 <span className="text-slate-400 text-[10px]">Earn points per habit</span>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 leading-tight mb-2">My Daily Discipleship Altars</h3>
+              <h3 className="text-lg font-bold text-slate-900 leading-tight mb-2">Daily Wellness Routines</h3>
               <p className="text-xs text-slate-600 mb-4 font-medium">
-                Track how many times you handled correction with Godly grace.
+                Track how many times you co-designed healthy boundaries and applied active listening support.
               </p>
 
               <div className="space-y-3">
@@ -1362,33 +1364,33 @@ export default function App() {
               </div>
             </section>
 
-            {/* Core Box 4: Featured Scriptures on Proverbs 22:6 (span-5) */}
-            <section id="bento-scripture-card" className="lg:col-span-5 bg-amber-50 border border-amber-200 rounded-3xl p-6 shadow-sm text-center flex flex-col justify-center items-center min-h-[220px]">
-              <div className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 mb-2">
-                📖
+            {/* Core Box 4: Featured Scientific Quote (span-5) */}
+            <section id="bento-quote-card" className="lg:col-span-5 bg-emerald-50/50 border border-emerald-100 rounded-3xl p-6 shadow-sm text-center flex flex-col justify-center items-center min-h-[220px]">
+              <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-800 mb-2">
+                💡
               </div>
-              <p className="font-serif italic text-base text-amber-950 leading-relaxed max-w-md">
-                "Train up a child in the way he should go; and when he is old, he will not depart from it."
+              <p className="font-sans font-medium text-slate-800 text-sm md:text-base leading-relaxed max-w-md">
+                "Connection is the precursor to correction. When teenagers feel psychologically safe, boundaries shift from rules to mutual respect."
               </p>
-              <h4 className="text-xs font-extrabold text-amber-800 uppercase tracking-widest mt-2">
-                Proverbs 22:6 (KJV)
+              <h4 className="text-xs font-extrabold text-[#047857] uppercase tracking-widest mt-2">
+                Adolescent Psychology Matrix
               </h4>
-              <p className="text-[10px] text-amber-600 mt-1.5 max-w-xs">
-                In local contexts, training requires 'Obuo' (respect), consistent spiritual altars, and model parenting traits.
+              <p className="text-[10px] text-slate-500 mt-1.5 max-w-xs">
+                In peer contexts, training requires validating trust, consistent behavioral routines, and modeling active-listening habits.
               </p>
             </section>
 
             {/* Core Box 5: Masterclass Podcast audio block (span-3) */}
-            <section id="bento-masterclass-voice" className="lg:col-span-3 bg-indigo-955 text-white bg-emerald-950 border border-emerald-900 rounded-3xl p-5 shadow-sm flex flex-col justify-between min-h-[220px]">
+            <section id="bento-masterclass-voice" className="lg:col-span-3 bg-slate-900 border border-slate-800 rounded-3xl p-5 shadow-sm flex flex-col justify-between min-h-[220px]">
               <div>
-                <span className="bg-emerald-800 text-emerald-200 text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest block w-max">
+                <span className="bg-emerald-800 text-emerald-100 text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest block w-max">
                   Voice Mini-Guide
                 </span>
                 <h4 className="text-base font-bold text-white mt-2 leading-tight">
-                  Discipline with Wisdom, Not Whipping
+                  Discipline with Wisdom & Active Listening
                 </h4>
-                <p className="text-[11px] text-emerald-200 mt-1 leading-relaxed">
-                  Listen to an expert maternal guide session discussing heart conviction based on Hebrews 12:11.
+                <p className="text-[11px] text-slate-350 mt-1 leading-relaxed">
+                  Listen to a maternal guidance audio sample explaining boundary negotiations and neuro-wellness.
                 </p>
               </div>
 
@@ -1432,12 +1434,12 @@ export default function App() {
             {/* Left Box: Prompts & Counsel Settings (span-4) */}
             <section className="lg:col-span-4 bg-white border border-slate-200 rounded-3xl p-5 flex flex-col justify-between">
               <div>
-                <span className="bg-amber-100 text-amber-800 text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider block w-max mb-3">
-                  Counseling Room Setup
+                <span className="bg-emerald-50 text-emerald-800 text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider block w-max mb-3">
+                  Coaching Space Setup
                 </span>
-                <h3 className="text-lg font-bold text-slate-900 leading-tight mb-1">Interactive Devotional Mentoring</h3>
+                <h3 className="text-lg font-bold text-slate-900 leading-tight mb-1">Interactive AI Advisory</h3>
                 <p className="text-xs text-slate-500 mb-4 leading-relaxed">
-                  Converse directly with **Uncle Kwame** or **Auntie Efua** about the development of teens based on Christian principles.
+                  Converse directly with **Dr. Kwame** or **Coach Efua** regarding screen balance, peer behavior, and modern adolescent wellness.
                 </p>
 
                 {/* Popular sample prompts to speed user interaction */}
@@ -1445,27 +1447,27 @@ export default function App() {
                 <div className="space-y-2">
                   <button
                     onClick={() => {
-                      setChatInput("My teenager refuses to attend church because of peer pressure. How do I guide them back calmly?");
+                      setChatInput("My teenager spends 6 hours on Social Media per day. How do I guide them into a calm analog focus interval?");
                     }}
                     className="w-full text-left p-3 text-xs rounded-2xl border border-slate-100 bg-slate-50 hover:bg-emerald-50 hover:border-emerald-200 transition font-medium"
                   >
-                    ⛪ Teenager resisting church attendance
+                    📱 Screen-life balance & focus issues
                   </button>
                   <button
                     onClick={() => {
-                      setChatInput("He lied about failing a boarding school examination prep. How do I address dishonesty from a biblical standpoint?");
+                      setChatInput("He lied about failing his boarding school chemistry mock exam. How do I address dishonesty calmly and construct a path forward?");
                     }}
                     className="w-full text-left p-3 text-xs rounded-2xl border border-slate-100 bg-slate-50 hover:bg-emerald-50 hover:border-emerald-200 transition font-medium"
                   >
-                    🛑 Addressing exam school dishonesty
+                    🛑 Addressing exam dishonesty / anxiety
                   </button>
                   <button
                     onClick={() => {
-                      setChatInput("What daily scriptures encourage 'Obasem' obedience and kind responsibility at home?");
+                      setChatInput("What screen-time boundaries can encourage focus and respectful digital hygiene at home?");
                     }}
                     className="w-full text-left p-3 text-xs rounded-2xl border border-slate-100 bg-slate-50 hover:bg-emerald-50 hover:border-emerald-200 transition font-medium"
                   >
-                    📖 Encouragement verses for obedience
+                    🌱 Habits for digital screen-hygiene
                   </button>
                 </div>
               </div>
@@ -1515,15 +1517,15 @@ export default function App() {
                     className={`flex gap-3 max-w-[85%] ${msg.role === "user" ? "ml-auto flex-row-reverse" : ""}`}
                   >
                     {msg.role === "model" && (
-                      <div className="w-8 h-8 rounded-full bg-slate-200 font-bold text-xs shrink-0 flex items-center justify-center border border-emerald-700 text-emerald-800 font-mono">
-                        UK
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-emerald-600 to-cyan-500 font-bold text-xs shrink-0 flex items-center justify-center text-white font-mono shadow-sm">
+                        ✨
                       </div>
                     )}
                     
                     <div className="space-y-1">
                       <div className={`p-4 rounded-3xl text-xs md:text-sm leading-relaxed ${
                         msg.role === "user" 
-                          ? "bg-emerald-700 text-white rounded-tr-none" 
+                          ? "bg-[#047857] text-white rounded-tr-none" 
                           : "bg-white text-slate-800 border border-slate-200 rounded-tl-none shadow-sm"
                       }`}>
                         {/* Format paragraph lines and bullet highlights */}
@@ -1533,6 +1535,29 @@ export default function App() {
                           }
                           return <p key={i} className={i > 0 ? "mt-2 font-medium" : "font-medium"}>{line}</p>;
                         })}
+
+                        {/* Grounded Web citations */}
+                        {msg.role === "model" && msg.sources && msg.sources.length > 0 && (
+                          <div className="mt-3 pt-3 border-t border-slate-100 space-y-1 text-left">
+                            <span className="text-[10px] uppercase font-black text-emerald-800 tracking-wider flex items-center gap-1">
+                              🔍 Grounded Web Search Clippings:
+                            </span>
+                            <div className="flex flex-wrap gap-1.5">
+                              {msg.sources.map((src, sIdx) => (
+                                <a
+                                  key={sIdx}
+                                  href={src.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1 bg-emerald-50 hover:bg-emerald-150 text-emerald-800 text-[11px] px-2.5 py-1 rounded-xl font-bold border border-emerald-100 transition-all"
+                                >
+                                  <ExternalLink className="w-3 h-3" />
+                                  <span>{src.title.length > 25 ? src.title.slice(0, 25) + "..." : src.title}</span>
+                                </a>
+                              ))}
+                            </div>
+                          </div>
+                        )}
                       </div>
 
                       {/* Speaks buttons underneath bots replies */}
@@ -1690,9 +1715,9 @@ export default function App() {
 
               {/* Notice guidelines */}
               <div className="bg-amber-50 rounded-2xl p-4 border border-amber-200">
-                <span className="text-xs font-bold text-amber-900 block mb-1">⛪ Mentoring Covenant</span>
+                <span className="text-xs font-bold text-amber-900 block mb-1">🤝 Code of Collaboration</span>
                 <p className="text-[11px] text-amber-800 leading-relaxed">
-                  We maintain strict privacy: do not share specific real teenager names or school identity. Support every mentor with prayer and sound scriptures!
+                  We maintain strict privacy: do not share specific real teenager names or school identity. Support every mentor with empathy and constructive guidance!
                 </p>
               </div>
             </section>
@@ -1703,7 +1728,7 @@ export default function App() {
               {/* Submission Form Component */}
               {showNewPostForm && (
                 <form onSubmit={submitNewForumPost} className="bg-white border border-amber-100 rounded-3xl p-6 shadow-sm space-y-4">
-                  <h4 className="font-extrabold text-sm text-emerald-950">Draft Mentor Encourgement Post</h4>
+                  <h4 className="font-extrabold text-sm text-emerald-950">Draft Mentor Strategy Post</h4>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
@@ -1715,8 +1740,8 @@ export default function App() {
                       >
                         <option value="Boarding School">🏫 Boarding School Prep & Pressure</option>
                         <option value="Social Media">📱 Social Media & Cyber Influence</option>
-                        <option value="Discipline">🛡️ Godly Respect & Discipline</option>
-                        <option value="Spiritual Growth">⭐ Spiritual Devotion & Prayer Altars</option>
+                        <option value="Discipline">🛡️ Boundaries & Healthy Discipline</option>
+                        <option value="Spiritual Growth">⭐ Deep Focus & Lifestyle Balance</option>
                       </select>
                     </div>
 
@@ -1728,9 +1753,9 @@ export default function App() {
                         className="w-full bg-slate-50 border border-slate-200 text-xs font-medium rounded-xl p-2.5"
                       >
                         <option value="Parent">Parent</option>
-                        <option value="Youth Pastor">Youth Pastor</option>
-                        <option value="SU Patron">Scripture Union Patron</option>
-                        <option value="Mentor">Local Mentor Organizer</option>
+                        <option value="Youth Guide">Youth Guide / Teen Counselor</option>
+                        <option value="Teen Coach">Teen Development Coach</option>
+                        <option value="Mentor">Local Mentor</option>
                         <option value="School Counselor">School Counselor</option>
                       </select>
                     </div>
@@ -1751,7 +1776,7 @@ export default function App() {
                       <label className="text-xs font-bold text-slate-500 block mb-1">Headline Title:</label>
                       <input
                         type="text"
-                        placeholder="e.g. Restoring family altars on Friday evenings..."
+                        placeholder="e.g. Setting dinner screen boundaries..."
                         value={newPostTitle}
                         onChange={(e) => setNewPostTitle(e.target.value)}
                         className="w-full bg-slate-50 border border-slate-200 text-xs rounded-xl p-2.5"
@@ -1840,10 +1865,10 @@ export default function App() {
                       {/* Anchor verses */}
                       {post.verses?.length > 0 && (
                         <div className="flex items-center gap-2 flex-wrap">
-                          <span className="text-[10px] font-bold text-amber-700 uppercase">Scripture anchors:</span>
+                          <span className="text-[10px] font-bold text-emerald-800 uppercase">Advice Anchors:</span>
                           {post.verses.map((v, i) => (
-                            <span key={i} className="text-[10px] font-bold bg-amber-50 text-amber-800 px-2.5 py-0.5 rounded-full border border-amber-100">
-                              📖 {v}
+                            <span key={i} className="text-[10px] font-bold bg-emerald-50 text-emerald-800 px-2.5 py-0.5 rounded-full border border-emerald-100/50">
+                              ✨ {v}
                             </span>
                           ))}
                         </div>
@@ -1858,7 +1883,7 @@ export default function App() {
                           }`}
                         >
                           <ThumbsUp className="w-4 h-4" />
-                          <span>{post.likes} Wisdom Amen</span>
+                          <span>{post.likes} Upvotes</span>
                         </button>
 
                         <button
@@ -1951,18 +1976,18 @@ export default function App() {
           <div id="resources-tab" className="space-y-6">
             <div className="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="max-w-xl">
-                <span className="bg-amber-100 text-amber-800 text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider block w-max mb-2">
-                  Pre-compiled Counseling Soundbites
+                <span className="bg-emerald-50 text-emerald-800 text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider block w-max mb-2">
+                  Evidence-Based Guidance Manuals
                 </span>
-                <h3 className="text-xl font-bold text-emerald-950 tracking-tight leading-none mb-2">Expert-led Devotional Parenting Handbook</h3>
+                <h3 className="text-xl font-bold text-emerald-950 tracking-tight leading-none mb-2">Expert-Led Adolescent Wellness Handbook</h3>
                 <p className="text-xs text-slate-500 leading-relaxed">
-                  These booklets utilize modern teen psychological milestones and tie them into boarding school scenarios across the country. Play any section text in audio to hear wise counseling narrated out.
+                  These booklets utilize modern teen psychological milestones and tie them into school, focus, and lifestyle scenarios across the country. Play any section text in audio to hear wise counseling narrated out.
                 </p>
               </div>
               <div className="flex bg-emerald-50 px-4 py-3 rounded-2xl border border-emerald-100 text-xs text-emerald-900 max-w-sm gap-2 shrink-0">
                 <span className="text-base text-emerald-800">💡</span>
                 <p className="leading-relaxed">
-                  Recommended to read with Sunday school leaders, Scripture Union boarding facilitators, and family members during weekend family altars.
+                  Recommended to read with teen health educators, school counselors, mentors, and family members during weekly balance check-ins.
                 </p>
               </div>
             </div>
@@ -2115,35 +2140,35 @@ export default function App() {
                   {(() => {
                     const stepDetails = [
                       {
-                        title: "Setting up the Digital Sanctuary",
+                        title: "Setting up the Digital Haven",
                         badge: "Foundation Step",
                         desc: "First impressions set the standard. Here's how to secure structure and profiles:",
                         rules: [
                           "Group Bifurcation: Create separate spaces for pre-teens (11-13) and older teens (14-18) to match their academic and emotional maturity.",
-                          "Ensure Multi-Admin Oversight: Always include at least two married couples, pastors, or vetted mentors. This prevents administrative blindspots.",
-                          "Verification Gateway: Never post group links publicly on social media channels. Distribute them strictly through physical parent connections.",
+                          "Ensure Multi-Admin Oversight: Always include at least two school counselors, educators, or vetted mentors. This prevents administrative blindspots.",
+                          "Verification Gateway: Never post group links publicly on social media channels. Distribute them strictly through verified parent connections.",
                           "Platform Locks: Enable the setting where only admins can edit the group metadata (photo, description) to eliminate disruptive behaviors."
                         ]
                       },
                       {
                         title: "Defining the Golden Codes of Conduct",
                         badge: "Security & Respect",
-                        desc: "Establish firm, biblical expectations to shield youth from moral confusion:",
+                        desc: "Establish firm, constructive expectations to shield youth from online distress & friction:",
                         rules: [
-                          "Strict 'Direct Messaging (DM)' Rule: Forbid direct messaging between opposite gender members privately. Any counseling should occur with a parent or leader in loop.",
-                          "Maintain High Dignity: Ban worldly insult slangs, adult multimedia, cyberbullying, or taking screenshots of fragile member prayer topics.",
+                          "Strict 'Direct Messaging (DM)' Rule: Forbid unsolicited, unverified private message exchanges of sensitive advice. Any counseling should occur with a certified therapist, guide, or parent in loop.",
+                          "Maintain High Dignity: Ban abusive insult slangs, adult multimedia, cyberbullying, or taking screenshots of fragile member shared topics.",
                           "Account Verification: Advise teens to display their real names and profile pictures so that absolute transparency is preserved.",
-                          "Restoration Framework: Create a friendly 'First Warn, Then Mute, Remove on Third Strike' code. Correct in love but prioritize the safety of the collective sanctuary."
+                          "Restoration Framework: Create a friendly 'First Warn, Then Mute, Remove on Third Strike' code. Correct with empathy but prioritize the safety of the collective group."
                         ]
                       },
                       {
                         title: "Structuring Consistent Weekly Calendars",
                         badge: "High-Engagement Keys",
-                        desc: "Spontaneous groups easily fall silent. True engagement comes from a recurring daily blueprint:",
+                        desc: "Spontaneous groups easily fall silent. True engagement comes from a recurring weekly blueprint:",
                         rules: [
-                          "Constant Rhythm: When teens know Wednesday stands for Boarding Prayer Requests and Saturday hosts the Trivia Arena, check-ins become habitual.",
-                          "Small File-Sizes: Share lightweight JPEG scripture images or short voice recordings rather than heavy documents to respect their mobile data limits.",
-                          "Praise Recognition: Constantly shout out active participants, crown high-performers, and highlight quiet members on their birthdays values!"
+                          "Constant Rhythm: When teens know Wednesday stands for Boarding Focus Checks and Saturday hosts the Trivia Arena, check-ins become habitual.",
+                          "Small File-Sizes: Share lightweight JPEG wellness infographics or short voice recordings rather than heavy documents to respect their mobile data limits.",
+                          "Praise Recognition: Constantly shout out active participants, crown high-performers, and highlight quiet members on their birthdays!"
                         ]
                       },
                       {
@@ -2151,9 +2176,9 @@ export default function App() {
                         badge: "Sparks & Play",
                         desc: "Bridge typical student boredom with playful, highly-engaging activities:",
                         rules: [
-                          "The 12-Word Devotional: Challenge youth to summarize their morning scripture reading in precisely 12 words with 2 emojis limit.",
-                          "Verse Recording Speedruns: Open the microphone for 10 minutes, prompting teens to record themselves reciting the weekly Memory Verse from memory. Reward speed!",
-                          "Anonymous Quiz Polls: Polls spike engagement because they shield shy teenagers. Let them test their biblical and ethical alignment privately first."
+                          "The 12-Word Lesson Challenge: Challenge youth to summarize their day's key insight in precisely 12 words with 2 emojis limit.",
+                          "Recap Speedruns: Open the microphone for 10 minutes, prompting teens to record themselves reciting a focus concept from memory. Reward speed!",
+                          "Anonymous Quiz Polls: Polls spike engagement because they shield shy teenagers. Let them test their lifestyle and ethical alignment privately first."
                         ]
                       },
                       {
@@ -2161,9 +2186,9 @@ export default function App() {
                         badge: "Group Revival Hacks",
                         desc: "How to breathe rich life back into a group that has gone completely silent:",
                         rules: [
-                          "Empower Student Co-Admins: Appoint mature Christian student prefects or teen leaders to co-manage the channel. Peer-to-peer sparks ignite twice as fast!",
-                          "Respect Academic Seasons: During examinations, lower formal devotion frequencies to zero. Share simple encouraging study tips or prayer support instead.",
-                          "The Scavenger Scramble: Launch a lightning game: 'First person to post a picture of a physical Bible open to Hebrews 11 wins 5 Grace points!'"
+                          "Empower Teen Co-Admins: Appoint mature student prefects or teen leaders to co-manage the channel. Peer-to-peer sparks ignite twice as fast!",
+                          "Respect Academic Seasons: During examinations, lower formal coaching frequencies to zero. Share simple encouraging study tips or focus support instead.",
+                          "The Desk Scramble: Launch a lightning game: 'First person to post a picture of a clean study focus desk setup wins 5 Vibe points!'"
                         ]
                       }
                     ][groupPlannerStep - 1];
@@ -2237,14 +2262,13 @@ export default function App() {
                           ))}
                         </div>
 
-                        {/* Selected day task view */}
                         {(() => {
                           const daysPlan: Record<string, { name: string; icon: string; desc: string; task: string }> = {
                             monday: {
-                              name: "Monday Manna",
+                              name: "Monday Vibe-Check",
                               icon: "🌅",
-                              desc: "Devotional Engagement",
-                              task: "Share a clean devotional quote at 6:00 AM. Ask teens to key-reply with a single emoji describing their state of heart, or a 1-sentence prayer aligned with that scripture."
+                              desc: "Focus Goal Setup",
+                              task: "Share a clean micro-focus quote or habit tip. Ask teens to key-reply with a single emoji describing their state of heart, or a 1-sentence goal for the week."
                             },
                             tuesday: {
                               name: "Tuesday Dilemma",
@@ -2255,32 +2279,32 @@ export default function App() {
                             wednesday: {
                               name: "Wednesday Vault",
                               icon: "🛡️",
-                              desc: "Interactive Prayer Altars",
-                              task: "Strictly focus on connection here. Ask teens: 'Any boarding stressors or family worries?' Encourage mutual agreement prayers. Dedicate a silent hour for prayer block."
+                              desc: "Mental-Health Sanctuary",
+                              task: "Strictly focus on connection. Ask teens: 'Any boarding stressors or family worries?' Encourage mutual support, active validation, and empathy. Dedicate a silent hour for reflection or decompression."
                             },
                             thursday: {
                               name: "Thursday Shift",
                               icon: "🎯",
-                              desc: "Bible Memory Recall Challenge",
-                              task: "Paste a scrambled verse and ask: 'First student to rearrange and trace the accurate Bible book/chapter wins the Weekly Mastermind Crown!'"
+                              desc: "Focus Scramble Challenge",
+                              task: "Paste a scrambled focus phrase or quote and ask: 'First person to rearrange and explain the wellness concept wins the Weekly Mastermind Crown!'"
                             },
                             friday: {
-                              name: "Friday Praise Echo",
+                              name: "Friday Echo Check",
                               icon: "🗣️",
-                              desc: "Voice Note Wave Check-in",
-                              task: "Mandate the use of voice notes. Ask members to record a 30-second audio praise of what they achieved or how God pulled them through this week. Audio creates human warmth!"
+                              desc: "Audio Win Sharing",
+                              task: "Mandate the use of voice notes. Ask members to record a 30-second audio of what they achieved or how they overcame a distraction this week. Audio creates human warmth!"
                             },
                             saturday: {
-                              name: "Saturday Scripture Arena",
+                              name: "Saturday Trivia Arena",
                               icon: "🎮",
-                              desc: "Scripture Quiz Battle",
-                              task: "Hold a scheduled 15-minute trivia duel using Telegram Quiz bot or speed typing templates. Publish the leaderboard scores immediately!"
+                              desc: "Balance Quiz Battle",
+                              task: "Hold a scheduled 15-minute trivia duel about science, school, and focus settings. Publish the leaderboard scores immediately!"
                             },
                             sunday: {
-                              name: "Sunday Covenant",
-                              icon: "⛪",
-                              desc: "Sermon Echo & Action Accord",
-                              task: "Prompt teens to share one core insight from their local church service sermon: 'Which lesson will you practice this week?' Wrap up with parental alignments."
+                              name: "Sunday Vision",
+                              icon: "🌱",
+                              desc: "Weekly Balance Review",
+                              task: "Prompt teens to share one core insight from their offline reflection: 'Which focus lesson will you practice this week?' Wrap up with mentoring alignment."
                             }
                           };
 
@@ -2431,7 +2455,7 @@ export default function App() {
                               className="w-full text-xs font-bold bg-white border border-slate-200 rounded-xl p-2.5 text-slate-700 focus:outline-none focus:ring-1 focus:ring-emerald-750 font-sans cursor-pointer shadow-sm"
                             >
                               <option value="discussion">💡 Friday Screen roundtable</option>
-                              <option value="devotional">🌅 Morning quiet time challenge</option>
+                              <option value="devotional">🌅 Morning focus challenge</option>
                               <option value="poll">🤔 Tuesday dilemma question</option>
                               <option value="safety">🛡️ Security & conduct admin alert</option>
                             </select>
@@ -2446,20 +2470,20 @@ export default function App() {
                                 switch (selectedPromptCategory) {
                                   case "devotional":
                                     return isWA 
-                                      ? `🌅 *MORNING MANNA CHALLENGE* 🌅\n\nHey family! Today we are reading *Joshua 1:9*. \n\n"Have I not commanded you? Be strong and courageous..."\n\n👉 *Your Task:* Post a 30-second voice note or text sharing ONE area you choose courage today! Let's pray! 🔥`
-                                      : `🌅 *MORNING MANNA CHALLENGE* 🌅\n\nHey team! Today's anchor is *Joshua 1:9*.\n\n"Be strong and courageous..."\n\n👇 *Click reaction below* once you complete your quiet time, then comment with one faith word! 🚀`;
+                                      ? `🌅 *MORNING FOCUS CHALLENGE* 🌅\n\nHey family! Today we are practicing *focused morning habit entry*.\n\n"Start with clarity, proceed with purpose."\n\n👉 *Your Task:* Post a 30-second voice note or text sharing ONE goal you choose to focus on today! Let's get it! 🔥`
+                                      : `🌅 *MORNING FOCUS CHALLENGE* 🌅\n\nHey team! Today's anchor is the *analog morning challenge*.\n\n"Start with clarity, proceed with purpose."\n\n👇 *Click reaction below* once you complete your analog 20-minute interval, then comment with one primary goal! 🚀`;
                                   case "poll":
                                     return isWA
                                       ? `🤔 *TUESDAY DILEMMA TIME* 🤔\n\nLet's get real class. If a classmate asks you to help them sneak an uncommitted smartphone into boarding housing, what do you do?\n\n1️⃣ Say "No, Charley, rules first."\n2️⃣ Compromise to stay close.\n3️⃣ Talk to our counselor.\n\nReply with option index! 👇`
                                       : `🤔 *DEEP FOCUS PROBE* 🤔\n\nHow do we handle study laziness during examination margins?\n\n(Use the anonymous quiz poll below to vote, then discuss inside parent comments!)`;
                                   case "safety":
                                     return isWA
-                                      ? `⚠️ *COMMUNITY PROTECTION PROTOCOL* ⚠️\n\nHello mentors and teens! Remember:\n\n🙅‍♂️ NO private-messaging opposite sex members.\n🙅‍♂️ NO external group links without validation.\n🚪 Chat locks at 9:30 PM for restorative sleep. Let's stand pure!`
-                                      : `🛡️ *SECURED CHAT SANCTUARY* 🛡️\n\nAttention Fellowship:\n\n1. Ensure your privacy config hides your numbers.\n2. Do NOT click unfamiliar outside host links.\n3. Keep text edifying and scriptural!`;
+                                      ? `⚠️ *COMMUNITY PROTECTION PROTOCOL* ⚠️\n\nHello mentors and teens! Remember:\n\n🙅‍♂️ NO unsolicited private-messaging of sensitive advice.\n🙅‍♂️ NO external group links without validation.\n🚪 Chat locks at 9:30 PM for restorative sleep. Let's stand strong!`
+                                      : `🛡️ *SECURED CHAT HAVEN* 🛡️\n\nAttention Fellowship:\n\n1. Ensure your privacy config hides your numbers.\n2. Do NOT click unfamiliar outside host links.\n3. Keep text edifying and helpful!`;
                                   default:
                                     return isWA
-                                      ? `💡 *FRIDAY ROUNDTABLE: SCREEN LIMITS* 💡\n\nLet's review our screen hours. We are discipling minds, not scrolling them.\n\n*Question:* What is one boundaries trick that saved your study hours this week? Speak out! 🗣️`
-                                      : `💡 *FRIDAY ROUNDTABLE: INTENTIAL LIVING* 💡\n\n"He who walks with the wise grows wise..." (Proverbs 13:20)\n\nComment below: Share one awesome trait you admire in a Christian peer! 👇`;
+                                      ? `💡 *FRIDAY ROUNDTABLE: SCREEN LIMITS* 💡\n\nLet's review our screen hours. We are guiding minds, not scrolling them.\n\n*Question:* What is one boundaries trick that saved your study hours this week? Speak out! 🗣️`
+                                      : `💡 *FRIDAY ROUNDTABLE: INTENTIAL LIVING* 💡\n\n"He who walks with the wise grows wise..."\n\nComment below: Share one awesome focus trait you admire in a peer! 👇`;
                                 }
                               })()}
                             </pre>
@@ -2476,8 +2500,8 @@ export default function App() {
                           switch (selectedPromptCategory) {
                             case "devotional":
                               txt = isWA 
-                                ? `🌅 *MORNING MANNA CHALLENGE* 🌅\n\nHey family! Today we are reading *Joshua 1:9*. \n\n"Have I not commanded you? Be strong and courageous..."\n\n👉 *Your Task:* Post a 30-second voice note or text sharing ONE area you choose courage today! Let's pray! 🔥`
-                                : `🌅 *MORNING MANNA CHALLENGE* 🌅\n\nHey team! Today's anchor is *Joshua 1:9*.\n\n"Be strong and courageous..."\n\n👇 *Click reaction below* once you complete your quiet time, then comment with one faith word! 🚀`;
+                                ? `🌅 *MORNING FOCUS CHALLENGE* 🌅\n\nHey family! Today we are practicing *focused morning habit entry*.\n\n"Start with clarity, proceed with purpose."\n\n👉 *Your Task:* Post a 30-second voice note or text sharing ONE goal you choose to focus on today! Let's get it! 🔥`
+                                : `🌅 *MORNING FOCUS CHALLENGE* 🌅\n\nHey team! Today's anchor is the *analog morning challenge*.\n\n"Start with clarity, proceed with purpose."\n\n👇 *Click reaction below* once you complete your analog 20-minute interval, then comment with one primary goal! 🚀`;
                               break;
                             case "poll":
                               txt = isWA
@@ -2486,13 +2510,13 @@ export default function App() {
                               break;
                             case "safety":
                               txt = isWA
-                                ? `⚠️ *COMMUNITY PROTECTION PROTOCOL* ⚠️\n\nHello mentors and teens! Remember:\n\n🙅‍♂️ NO private-messaging opposite sex members.\n🙅‍♂️ NO external group links without validation.\n🚪 Chat locks at 9:30 PM for restorative sleep. Let's stand pure!`
-                                : `🛡️ *SECURED CHAT SANCTUARY* 🛡️\n\nAttention Fellowship:\n\n1. Ensure your privacy config hides your numbers.\n2. Do NOT click unfamiliar outside host links.\n3. Keep text edifying and scriptural!`;
+                                ? `⚠️ *COMMUNITY PROTECTION PROTOCOL* ⚠️\n\nHello mentors and teens! Remember:\n\n🙅‍♂️ NO unsolicited private-messaging of sensitive advice.\n🙅‍♂️ NO external group links without validation.\n🚪 Chat locks at 9:30 PM for restorative sleep. Let's stand strong!`
+                                : `🛡️ *SECURED CHAT HAVEN* 🛡️\n\nAttention Fellowship:\n\n1. Ensure your privacy config hides your numbers.\n2. Do NOT click unfamiliar outside host links.\n3. Keep text edifying and helpful!`;
                               break;
                             default:
                               txt = isWA
-                                ? `💡 *FRIDAY ROUNDTABLE: SCREEN LIMITS* 💡\n\nLet's review our screen hours. We are discipling minds, not scrolling them.\n\n*Question:* What is one boundaries trick that saved your study hours this week? Speak out! 🗣️`
-                                : `💡 *FRIDAY ROUNDTABLE: INTENTIAL LIVING* 💡\n\n"He who walks with the wise grows wise..." (Proverbs 13:20)\n\nComment below: Share one awesome trait you admire in a Christian peer! 👇`;
+                                ? `💡 *FRIDAY ROUNDTABLE: SCREEN LIMITS* 💡\n\nLet's review our screen hours. We are guiding minds, not scrolling them.\n\n*Question:* What is one boundaries trick that saved your study hours this week? Speak out! 🗣️`
+                                : `💡 *FRIDAY ROUNDTABLE: INTENTIAL LIVING* 💡\n\n"He who walks with the wise grows wise..."\n\nComment below: Share one awesome focus trait you admire in a peer! 👇`;
                           }
                           
                           if (navigator && navigator.clipboard) {
@@ -2533,7 +2557,7 @@ export default function App() {
           </div>
           <div>
             <p className="text-xs font-extrabold">Wisdom Voice Active</p>
-            <p className="text-[10px] text-emerald-200">Our maternal mentor vocal tract is narrating scripture guides.</p>
+            <p className="text-[10px] text-emerald-200">Our mentor voice synthesizers are active narrating guides.</p>
           </div>
           <button 
             onClick={() => {
